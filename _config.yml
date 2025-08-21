@@ -1,0 +1,5 @@
+title: My WildCat Studios Portfolio description: >-
+         This is my portfolio showcasing my projects and skills.
+baseurl: "" # leave empty since this is your user page
+url: "https://ms2902022.github.io" # replace YOURUSERNAME with your GitHub username
+theme: merlot # replace with your chosen theme from the list
