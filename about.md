@@ -1,7 +1,4 @@
 ---
-layout: default
-title: About Me
----
 # About Me
 Hello! I am [MS!].
 **My goals are to get straight A's. I love to read in my free time. And North Carolina is my favorite place on Earth.**
