@@ -5,7 +5,7 @@
 - [Flutter Notes](#flutter-notes)
   - [What is Flutter?](#what-is-flutter)
   - [Key Terms and Definitions](#key-terms-and-definitions)
-  - [Definitions with Structures](#Flutter-Definitions-with-structures)
+  - [Definitions with Structures](#flutter-definitions-with-structures)
   - [Layout and Design Widgets](layout-and-design-widgets)
 - [Code Definitions](#code-definitions)
 - [Notebook Style Guide](#markdown-style-guide-for-coding-notebooks)
@@ -49,36 +49,28 @@
 
 | Term | Definition and Description | Base Structure | Real Life Example | App Example |
 |------|----------------------------|----------------|-------------------|-------------|
-|main()| A function that runs when your app starts. It tells Flutter what app to show. | `void main() => runApp(MyApp());` |Turning on a phone|  |
-|MaterialApp| The widget that sets up your whole app’s look and navigation. | `MaterialApp(...)` |Setting up a social media page|  |
-|Scaffold| A widget that gives you the basic layout: background, navigation bar, floating button, etc. | `Scaffold(...)` |Templetes (these notes)|  |
-|Column| A widget that holds and displays your content in a straight line from top to bottom. | `Column(...)` |Keep related content in order (these notes)|  |
-|Row| A widget that shows things side-by-side. | `Row(...)` |Keep related content in order (these notes)|  |
-|Container| A box that holds other widgets. You can add color, padding, borders, or size. | `Container(...)` |Designing a template on canva|  |
-|Text| A widget to display text on the screen. | `Text('Hello')` |Reaing articles from news outlets online|  |
-|Image.network| A widget to show an image using a link from the internet. | `Image.network('https://...')` |Google images|  |
-|ElevatedButton| A clickable button that floats above content. You choose what happens when it's clicked. | `ElevatedButton(onPressed: ..., child: ...)` |A key on a keyboard y7ou programmed outputs your character|  |
-|onPressed| The code that gets run when a button is tapped or something happens. | `onPressed: () => doSomething()` |A key on a keyboard outputs a character|  |
-|StatelessWidget| A class that creates widgets that never change. Good for static screens. | `class HomeScreen extends StatelessWidget` |A profile picture|  |
+|main()| A function that runs when your app starts. It tells Flutter what app to show. | `void main() => runApp(MyApp());` |Turning on a phone|main.dart, void main() => runApp(MyPortfolioApp());|
+|MaterialApp| The widget that sets up your whole app’s look and navigation. | `MaterialApp(...)` |Setting up a social media page|main.dart, return MaterialApp(debugShowCheckedModeBanner: false,title: 'TSA Portfolio',theme: ThemeData(, and more|
+|Scaffold| A widget that gives you the basic layout: background, navigation bar, floating button, etc. | `Scaffold(...)` |Templetes (these notes)|showcase.dart, return Scaffold(body: Column(mainAxisAlignment: MainAxisAlignment.start,children: [|
+|Column| A widget that holds and displays your content in a straight line from top to bottom. | `Column(...)` |Keep related content in order (these notes)|showcase.dart,  child: Column(children: [|
+|Row| A widget that shows things side-by-side. | `Row(...)` |Keep related content in order (these notes)|infocard.dart,  child: Row(children: [|
+|Container| A box that holds other widgets. You can add color, padding, borders, or size. | `Container(...)` |Designing a template on canva|infocard.dart, return Container margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),padding: const EdgeInsets.all(12),decoration: BoxDecoration(|
+|Text| A widget to display text on the screen. | `Text('Hello')` |Reaing articles from news outlets online|infocard.dart,  child: Text(description,style: const TextStyle(color: Colors.white),|
+|Image.network| A widget to show an image using a link from the internet. | `Image.network('https://...')` |Google images|infocard.dart, child: Image.network(imageUrl, width: 100, height: 100, fit: BoxFit.cover),),|
+|ElevatedButton| A clickable button that floats above content. You choose what happens when it's clicked. | `ElevatedButton(onPressed: ..., child: ...)` |A key on a keyboard y7ou programmed outputs your character|showcase.dart,  ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/alt'),child: const Text('Alternate Design'),|
+|onPressed| The code that gets run when a button is tapped or something happens. | `onPressed: () => doSomething()` |A key on a keyboard outputs a character|showcase.dart, onPressed: () => Navigator.pushNamed(context, '/alt'),child: const Text('Alternate Design'),|
+|StatelessWidget| A class that creates widgets that never change. Good for static screens. | `class HomeScreen extends StatelessWidget` |A profile picture|infocard.dart, StatelessWidget {final String imageUrl;final String description;|
 |StatefulWidget| A class for widgets that can change while the app is running. | `class MyWidget extends StatefulWidget` |Game graphics on a screen|  |
 |Navigator| Lets you move from one screen to another using route names. | `Navigator.pushNamed(context, '/about')` |Navigation through a website|  |
-|| Makes space around a widget inside its container. | `Padding(padding: EdgeInsets.all(8.0), child: ...)` ||  |
-
-|      | Aligns content in the center of the screen or container. | `Center(child: ...)` |  |  |
-
-|      | Automatically puts widgets onto a new line when there's no space. | `Wrap(children: [...])` |  |  |
-
+|Padding| Makes space around a widget inside its container. | `Padding(padding: EdgeInsets.all(8.0), child: ...)` |Packing Peanuts|  |
+|Center| Aligns content in the center of the screen or container. | `Center(child: ...)` |App title (thats in the center)|  |
+|Wrap| Automatically puts widgets onto a new line when there's no space. | `Wrap(children: [...])` |Writing in a doc wraps to the next line|  |
 |@override| This marks a method as one that’s replacing a method in a parent class. | `@override` |Updating a website|  |
-
-|      | The special function in every widget that describes what gets drawn on the screen. | `Widget build(BuildContext context) {...}` |  |  |
-
-|      | Required in every widget class to describe what to show. | `build` |  |  |
-
-|      | A variable that helps the widget know where it is and lets it communicate with the app. | `BuildContext context` |  |  |
-
-|      | A keyword used to pass a value to the parent widget. | `super.key` |  |  |
-
-|      | A keyword that means the value won't change and is set once. | `const` |  |  |
+|build()| The special function in every widget that describes what gets drawn on the screen. | `Widget build(BuildContext context) {...}` |Having a blueprint for a project|  |
+|build| Required in every widget class to describe what to show. | `build` |Printing out a design|  |
+|BuildContext| A variable that helps the widget know where it is and lets it communicate with the app. | `BuildContext context` |Typing and hitting undo|  |
+|super.key| A keyword used to pass a value to the parent widget. | `super.key` |Sending an email|  |
+|Const| A keyword that means the value won't change and is set once. | `const` |Title of a homescreen, won't change|  |
 
 
 
@@ -90,10 +82,10 @@
 
 | Term | Definition | Base Structure / Syntax | Real Life Example | App Example |
 |------|------------|--------------------------|-------------------|-------------|
-|Variable| A named container used to store a value that may change. | `var x = 5;` |Amount of water in a watterbottle|  |
-|Constant| A fixed value that cannot change once set. | `const PI = 3.14;` |Apps title, font, etc.|Text size, colors, etc.|
-|Data Type| The kind of value a variable holds, like numbers or text. | `int`, `String`, `bool` |Processing text from a book|Processing an image code|
-|String| A sequence of characters used to represent words or text. | `"Hello World"` |Sentences|Coding|
+|Variable| A named container used to store a value that may change. | `var x = 5;` |Amount of water in a watterbottle|main.dart, string title: TSA Portfolio|
+|Constant| A fixed value that cannot change once set. | `const PI = 3.14;` |Apps title, font, etc.|main.dart, const MyPortfolioApp({super.key});|
+|Data Type| The kind of value a variable holds, like numbers or text. | `int`, `String`, `bool` |Processing text from a book|main.dart, bool,debugShowCheckedModeBanner:false,|
+|String| A sequence of characters used to represent words or text. | `"Hello World"` |Sentences||
 |Integer| Whole number values. | `int age = 16;` |Clock|Streak counter|
 |Double| Number values with decimals. | `double age = 16.2;` |Calculator|Physics in game|
 |Boolean| A value that can be true or false. | `bool isLoggedIn = false;` |Human movement|Charecter movement|
