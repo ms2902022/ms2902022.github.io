@@ -60,17 +60,17 @@
 |ElevatedButton| A clickable button that floats above content. You choose what happens when it's clicked. | `ElevatedButton(onPressed: ..., child: ...)` |A key on a keyboard y7ou programmed outputs your character|showcase.dart,  ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/alt'),child: const Text('Alternate Design'),|
 |onPressed| The code that gets run when a button is tapped or something happens. | `onPressed: () => doSomething()` |A key on a keyboard outputs a character|showcase.dart, onPressed: () => Navigator.pushNamed(context, '/alt'),child: const Text('Alternate Design'),|
 |StatelessWidget| A class that creates widgets that never change. Good for static screens. | `class HomeScreen extends StatelessWidget` |A profile picture|infocard.dart, StatelessWidget {final String imageUrl;final String description;|
-|StatefulWidget| A class for widgets that can change while the app is running. | `class MyWidget extends StatefulWidget` |Game graphics on a screen|  |
-|Navigator| Lets you move from one screen to another using route names. | `Navigator.pushNamed(context, '/about')` |Navigation through a website|  |
-|Padding| Makes space around a widget inside its container. | `Padding(padding: EdgeInsets.all(8.0), child: ...)` |Packing Peanuts|  |
-|Center| Aligns content in the center of the screen or container. | `Center(child: ...)` |App title (thats in the center)|  |
-|Wrap| Automatically puts widgets onto a new line when there's no space. | `Wrap(children: [...])` |Writing in a doc wraps to the next line|  |
-|@override| This marks a method as one that’s replacing a method in a parent class. | `@override` |Updating a website|  |
-|build()| The special function in every widget that describes what gets drawn on the screen. | `Widget build(BuildContext context) {...}` |Having a blueprint for a project|  |
-|build| Required in every widget class to describe what to show. | `build` |Printing out a design|  |
-|BuildContext| A variable that helps the widget know where it is and lets it communicate with the app. | `BuildContext context` |Typing and hitting undo|  |
-|super.key| A keyword used to pass a value to the parent widget. | `super.key` |Sending an email|  |
-|Const| A keyword that means the value won't change and is set once. | `const` |Title of a homescreen, won't change|  |
+|StatefulWidget| A class for widgets that can change while the app is running. | `class MyWidget extends StatefulWidget` |Game graphics on a screen|Not Applicable|
+|Navigator| Lets you move from one screen to another using route names. | `Navigator.pushNamed(context, '/about')` |Navigation through a website| onPressed: () => Navigator.pushNamed(context, '/alt'),child: const Text('Alternate Design'),|
+|Padding| Makes space around a widget inside its container. | `Padding(padding: EdgeInsets.all(8.0), child: ...)` |Packing Peanuts| Padding(padding: const EdgeInsets.only(left: 100.0),child: Column(children: [|
+|Center| Aligns content in the center of the screen or container. | `Center(child: ...)` |App title (thats in the center)| body: Center(child: Column(|
+|Wrap| Automatically puts widgets onto a new line when there's no space. | `Wrap(children: [...])` |Writing in a doc wraps to the next line| Wrap(alignment: WrapAlignment.center, children: puppyUrls.map((url) => puppyImage(url)).toList()),ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/alt'),child: const Text('Alternate Design'),|
+|@override| This marks a method as one that’s replacing a method in a parent class. | `@override` |Updating a website|@overrideWidget build(BuildContext context) {final List<Map<String, String>> dogInfo = [{|
+|build()| The special function in every widget that describes what gets drawn on the screen. | `Widget build(BuildContext context) {...}` |Having a blueprint for a project|Widget build(BuildContext context) {return Scaffold(body: Center(|
+|build| Required in every widget class to describe what to show. | `build` |Printing out a design|Widget build(BuildContext context) {return Scaffold(body: Center(|
+|BuildContext| A variable that helps the widget know where it is and lets it communicate with the app. | `BuildContext context` |Typing and hitting undo|Widget build(BuildContext context) {return Scaffold(body: Center(|
+|super.key| A keyword used to pass a value to the parent widget. | `super.key` |Sending an email|super.key,required this.imageUrl,required this.description,});|
+|Const| A keyword that means the value won't change and is set once. | `const` |Title of a homescreen, won't change|const InfoCard({super.key,required this.imageUrl,required this.description,});|
 
 
 
@@ -85,14 +85,14 @@
 |Variable| A named container used to store a value that may change. | `var x = 5;` |Amount of water in a watterbottle|main.dart, string title: TSA Portfolio|
 |Constant| A fixed value that cannot change once set. | `const PI = 3.14;` |Apps title, font, etc.|main.dart, const MyPortfolioApp({super.key});|
 |Data Type| The kind of value a variable holds, like numbers or text. | `int`, `String`, `bool` |Processing text from a book|main.dart, bool,debugShowCheckedModeBanner:false,|
-|String| A sequence of characters used to represent words or text. | `"Hello World"` |Sentences||
-|Integer| Whole number values. | `int age = 16;` |Clock|Streak counter|
-|Double| Number values with decimals. | `double age = 16.2;` |Calculator|Physics in game|
-|Boolean| A value that can be true or false. | `bool isLoggedIn = false;` |Human movement|Charecter movement|
-|List| A collection of values in a specific order. | `List<String> names = [];` |Individuals Info.|App Info.|
-|Null| A special value that means “nothing.” | `String? name = null;` |Not knowing a username|Before game level loads|
-|Function| A reusable block of code that performs an action. | `void sayHi() { print("Hi"); }` |Jumping in a game|A loop|
-|Parameter| The information passed into a function to change how it works. | `greet(String name)` |Bank information (account #)|Username/password|
+|String| A sequence of characters used to represent words or text. | `"Hello World"` |Sentences|main.dart,  title: 'TSA Portfolio',|
+|Integer| Whole number values. | `int age = 16;` |Clock||
+|Double| Number values with decimals. | `double age = 16.2;` |Calculator|main.dart, isplayLarge: TextStyle(fontSize: 36, color: Colors.white, fontWeight: FontWeight.bold),bodyLarge: TextStyle(color: Colors.white),|
+|Boolean| A value that can be true or false. | `bool isLoggedIn = false;` |Human movement||
+|List| A collection of values in a specific order. | `List<String> names = [];` |Individuals Info.||
+|Null| A special value that means “nothing.” | `String? name = null;` |Not knowing a username||
+|Function| A reusable block of code that performs an action. | `void sayHi() { print("Hi"); }` |Jumping in a game||
+|Parameter| The information passed into a function to change how it works. | `greet(String name)` |Bank information (account #)||
 |Return| The result a function gives back. | `return total;` |Making a deposite, recipt in return ||
 |Scope| Where a variable or function can be used. | (No set syntax — concept-based) |Kite (wind/outside)|  |
 |Class| Blueprint for creating objects with specific structure and behavior. | `class Dog {}` |Waterbottles, computers, dogs, (everything!)|  |
