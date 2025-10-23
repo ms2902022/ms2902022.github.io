@@ -103,12 +103,14 @@
 |Abstraction| Hiding the inner workings of code so users only interact with what they need. | (Concept — not specific code) |Hiding complex translation (keyboard, binary, etc.)|  |
 |Override| Changing how a built-in or inherited function behaves. | `@override` |Changing print statements to make it more useable (waterbottleABC123 = waterbottle, blue, # volume)|  |
 |Void| A function that does not return a value. | `void printMessage() {}` |Teacher speaking - no return|  |
-
-
-
-
-
-
+|Scanner| Creates a scanner object to take input from user| Scanner in  =  new Scanner(System.in);|  | |
+| import Scanner | Gives access to Scanner class, required at top |import java.util.Scanner; |  | |
+| print line statement |prints the content in the parenthesis, adds line after  |System.out.println(" "); |  | |
+| print statement  |orints the content in the parenthesis  |System.out.print(" "); |  | |
+| input nextLine |reads in an int from the user  | input.nextLine(); |  | |
+|inputnextInt  |reads in an int from the user  | input.nextInt();|  | |
+|input nextDouble   |  reads in a double (decimal) from the user| input.nextDouble();|  | |
+| input nextBoolean |  reada in a boolean (true/false) from the user| input.nextBoolean();|  | |
 
 
 
