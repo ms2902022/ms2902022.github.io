@@ -110,8 +110,9 @@
 | input nextLine |reads in an int from the user  | input.nextLine(); |  | |
 |inputnextInt  |reads in an int from the user  | input.nextInt();|  | |
 |input nextDouble   |  reads in a double (decimal) from the user| input.nextDouble();|  | |
-| input nextBoolean |  reada in a boolean (true/false) from the user| input.nextBoolean();|  | |
-
+| input nextBoolean |  reads in a boolean (true/false) from the user| input.nextBoolean();|  | |
+|Arithmetic Operators| + - * % modulus, returns the remainder from dividing||||
+|Compound operators|+= -+ *= %= ++ applies the result o the variable||||
 
 
 
