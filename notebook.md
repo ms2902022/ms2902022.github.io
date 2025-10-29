@@ -112,7 +112,12 @@
 |input nextDouble   |  reads in a double (decimal) from the user| input.nextDouble();|  | |
 | input nextBoolean |  reads in a boolean (true/false) from the user| input.nextBoolean();|  | |
 |Arithmetic Operators| + - * % modulus, returns the remainder from dividing||||
-|Compound operators|+= -+ *= %= ++ applies the result o the variable||||
+|Compound operators|+= -+ *= %= ++ applies the result o the variable|||
+|Maximum int|The max value an int can hold: -2147483647|Integer.MAX_VALUE|||
+|Minimum int|The minimum value an int can hold: -2147483647|Integer.MIN_VALUE|||
+|Integer overflow|Integer.MAX_Value + 1 == MIN_VALUE, it wraps around||||
+|Integer underflow|Integer.MIN_VALUE - 1 == MAX_VALUE, it wraps around||||
+|Round-off error|An aprprox. of the actual value, result is rounded to the nearest value that fits within the available bits||||
 
 
 
